@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('./img/pic.png') no-repeat center center/cover;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+      flex-direction: column;
+    }
+
+    .greeting-container {
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 1rem;
+      margin: 2vh;
+      max-width: 90vw;
+    }
+
+    h1 {
+      font-size: 8vw;
+      color: white;
+      text-shadow: 2px 2px 4px #ff1493;
+      margin-bottom: 0.5rem;
+    }
+
+    .message {
+      font-size: 5vw;
+      color: #fff5f5;
+      margin-top: 10px;
+    }
+
+    .balloons {
+      position: absolute;
+      bottom: -100px;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .balloon {
+      width: 10vw;
+      max-width: 60px;
+      height: 14vw;
+      max-height: 80px;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      background-color: #ff69b4;
+      position: relative;
+      animation: floatUp 6s infinite ease-in;
+    }
+
+    .balloon::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 30px;
+      background: black;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0);
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
+      .message {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="greeting-container">
+    <h1>🎉 Happy Birthday Nishat! 🎂</h1>
+    <p class="message">Ettogola Valobasa Nio!</p>
+    <p class="message">Wishing you joy, laughter, and unforgettable memories!</p>
+  </div>
+
+  <div class="balloons">
+    <div class="balloon" style="background-color: #ff6347;"></div>
+    <div class="balloon" style="background-color: #ffa07a;"></div>
+    <div class="balloon" style="background-color: #f08080;"></div>
+    <div class="balloon" style="background-color: #da70d6;"></div>
+    <div class="balloon" style="background-color: #ba55d3;"></div>
+  </div>
+
+  <script>
+    // Optional: Add background music
+    // const audio = new Audio('happy-birthday.mp3');
+    // audio.play();
+  </script>
+</body>
+</html>
